@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/GFX/Background/bg_layer3.png" type="Texture" id=3]
 [ext_resource path="res://assets/GFX/Background/bg_layer4.png" type="Texture" id=4]
 
-[node name="ParallaxBackground" type="ParallaxBackground"]
+[node name="ParallaxBackground" type="ParallaxBackground" index="0"]
 
 layer = -1
 offset = Vector2( 0, 0 )
@@ -36,7 +36,7 @@ _sections_unfolded = [ "Material", "Offset", "Z Index" ]
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="." index="1"]
 
-motion_scale = Vector2( 0.4, 0.4 )
+motion_scale = Vector2( 0.6, 1 )
 motion_offset = Vector2( 0, -750 )
 motion_mirroring = Vector2( 2048, 0 )
 _sections_unfolded = [ "Motion" ]
@@ -49,7 +49,7 @@ _sections_unfolded = [ "Material", "Offset", "Z Index" ]
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="." index="2"]
 
-motion_scale = Vector2( 0.6, 0.6 )
+motion_scale = Vector2( 0.8, 1 )
 motion_offset = Vector2( 0, -750 )
 motion_mirroring = Vector2( 2048, 0 )
 _sections_unfolded = [ "Motion" ]
@@ -62,7 +62,7 @@ _sections_unfolded = [ "Material", "Offset", "Z Index" ]
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="." index="3"]
 
-motion_scale = Vector2( 1, 1 )
+motion_scale = Vector2( 1.25, 1 )
 motion_offset = Vector2( 0, -750 )
 motion_mirroring = Vector2( 2048, 0 )
 _sections_unfolded = [ "Motion" ]

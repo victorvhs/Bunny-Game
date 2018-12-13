@@ -4,6 +4,8 @@ const SPEED = 750
 const GRAVITY = 3600
 const UP = Vector2(0,-1)
 const JUMP_SPEED = -1750
+
+export var world_limit = 2000
 var motion = Vector2()
 
 func _physics_process(delta):

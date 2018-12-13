@@ -8,6 +8,8 @@
 
 [node name="player" parent="." index="0" instance=ExtResource( 1 )]
 
+world_limit = 2000
+
 [node name="Camera2D" parent="player" index="2" instance=ExtResource( 2 )]
 
 rotating = true
