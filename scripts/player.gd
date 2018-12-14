@@ -24,11 +24,14 @@ func update_animation(motion):
 	$AnimatedSprite.update(motion)
 	
 func fall(delta):
-	if is_on_floor():
+	if is_on_floor() or is_on_ceiling():
 		motion.y = 0
 	else:
 		motion.y += GRAVITY * delta	
-
+	if position.y > world_limit:
+		end_game()
+func end_game():
+	get_tree().change_scene("res://scenes/gameOver.tscn")
 func jump():
 	if Input.is_action_pressed("ui_up") and is_on_floor():
 		motion.y = JUMP_SPEED
