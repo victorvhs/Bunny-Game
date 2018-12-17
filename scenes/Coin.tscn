@@ -53,7 +53,7 @@ tracks/1/keys = {
 } ]
 }
 
-[node name="Coins" type="AnimatedSprite" index="0"]
+[node name="Coins" type="AnimatedSprite"]
 
 position = Vector2( -0.0275836, -0.0275836 )
 frames = SubResource( 1 )
