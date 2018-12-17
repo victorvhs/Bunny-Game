@@ -18,12 +18,14 @@ func hurt():
 	lifes -= 1
 	Global.Player.hurtJump()
 	update_GUI()
+	Global.pain.play()
 	if lifes <  0:
 		end_game()
 
 func coins_up():
 	coins += 1
 	Global.GUI.coins(coins)
+	Global.coin.play()
 	var extra_life =  (coins % coin_target) == 0
 	if extra_life:
 		life_up()
@@ -31,6 +33,7 @@ func coins_up():
 func life_up():
 	lifes +=1
 	update_GUI()
+	Global.lifeUp.play()
 
 func end_game():
 	get_tree().change_scene("res://scenes/gameOver.tscn")

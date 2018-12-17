@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scripts/GameState.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Spikes.tscn" type="PackedScene" id=2]
@@ -6,8 +6,17 @@
 [ext_resource path="res://scenes/Camera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/plataform_tiles.tres" type="TileSet" id=5]
 [ext_resource path="res://scenes/Coin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/SFX/Summer_Park.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/SFX/jump1.ogg" type="AudioStream" id=8]
+[ext_resource path="res://scripts/Jump.gd" type="Script" id=9]
+[ext_resource path="res://assets/SFX/coin_SFX.wav" type="AudioStream" id=10]
+[ext_resource path="res://scripts/Coinsfx.gd" type="Script" id=11]
+[ext_resource path="res://assets/SFX/pain.ogg" type="AudioStream" id=12]
+[ext_resource path="res://scripts/Pain.gd" type="Script" id=13]
+[ext_resource path="res://assets/SFX/lifeup.wav" type="AudioStream" id=14]
+[ext_resource path="res://scripts/LifeUp.gd" type="Script" id=15]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -98,130 +107,177 @@ __meta__ = {
 
 [node name="Coins" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
+
 [node name="Coins" parent="Coins" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( -66.3625, 739.384 )
-frame = 0
+frame = 4
 
 [node name="Coins2" parent="Coins" index="1" instance=ExtResource( 6 )]
 
 position = Vector2( 37.5007, 740.279 )
-frame = 1
+frame = 5
 
 [node name="Coins3" parent="Coins" index="2" instance=ExtResource( 6 )]
 
 position = Vector2( 143.155, 743.861 )
-frame = 1
+frame = 5
 
 [node name="Coins4" parent="Coins" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( 270.298, 744.756 )
+frame = 1
 
 [node name="Coins5" parent="Coins" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 270.298, 744.756 )
+frame = 1
 
 [node name="Coins6" parent="Coins" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 393.859, 643.579 )
-frame = 0
+frame = 4
 
 [node name="Coins7" parent="Coins" index="6" instance=ExtResource( 6 )]
 
 position = Vector2( 980.422, 630.911 )
-frame = 0
+frame = 4
 
 [node name="Coins8" parent="Coins" index="7" instance=ExtResource( 6 )]
 
 position = Vector2( 1170.42, 630.911 )
-frame = 5
 
 [node name="Coins9" parent="Coins" index="8" instance=ExtResource( 6 )]
 
 position = Vector2( 1362.42, 630.911 )
-frame = 5
 
 [node name="Coins10" parent="Coins" index="9" instance=ExtResource( 6 )]
 
 position = Vector2( 1554.42, 630.911 )
-frame = 5
 
 [node name="Coins11" parent="Coins" index="10" instance=ExtResource( 6 )]
 
 position = Vector2( 1938.42, 630.911 )
-frame = 5
 
 [node name="Coins12" parent="Coins" index="11" instance=ExtResource( 6 )]
 
 position = Vector2( 1928.42, 501.911 )
-frame = 5
 
 [node name="Coins13" parent="Coins" index="12" instance=ExtResource( 6 )]
 
 position = Vector2( 1928.42, 373.911 )
-frame = 5
 
 [node name="Coins14" parent="Coins" index="13" instance=ExtResource( 6 )]
 
 position = Vector2( 1928.42, 245.911 )
+frame = 1
 
 [node name="Coins15" parent="Coins" index="14" instance=ExtResource( 6 )]
 
 position = Vector2( 1928.42, 117.911 )
-frame = 3
+frame = 1
 
 [node name="Coins16" parent="Coins" index="15" instance=ExtResource( 6 )]
 
 position = Vector2( 1864.42, 117.911 )
-frame = 3
+frame = 1
 
 [node name="Coins17" parent="Coins" index="16" instance=ExtResource( 6 )]
 
 position = Vector2( 1800.42, 117.911 )
-frame = 3
+frame = 1
 
 [node name="Coins18" parent="Coins" index="17" instance=ExtResource( 6 )]
 
 position = Vector2( 1736.42, 117.911 )
-frame = 2
+frame = 0
 
 [node name="Coins19" parent="Coins" index="18" instance=ExtResource( 6 )]
 
 position = Vector2( 1672.42, 117.911 )
-frame = 1
+frame = 5
 
 [node name="Coins20" parent="Coins" index="19" instance=ExtResource( 6 )]
 
 position = Vector2( 1608.42, 117.911 )
-frame = 1
+frame = 5
 
 [node name="Coins21" parent="Coins" index="20" instance=ExtResource( 6 )]
 
 position = Vector2( 1544.42, 117.911 )
-frame = 0
+frame = 4
 
 [node name="Coins22" parent="Coins" index="21" instance=ExtResource( 6 )]
 
 position = Vector2( 1480.42, 117.911 )
-frame = 5
 
 [node name="Coins23" parent="Coins" index="22" instance=ExtResource( 6 )]
 
 position = Vector2( 1416.42, 117.911 )
-frame = 5
 
 [node name="Coins24" parent="Coins" index="23" instance=ExtResource( 6 )]
 
 position = Vector2( 1352.42, 117.911 )
-frame = 5
 
 [node name="Coins25" parent="Coins" index="24" instance=ExtResource( 6 )]
 
 position = Vector2( 1288.42, 117.911 )
-frame = 5
 
 [node name="Coins26" parent="Coins" index="25" instance=ExtResource( 6 )]
 
 position = Vector2( 1224.42, 117.911 )
+frame = 1
+
+[node name="sound" type="Node2D" parent="." index="4"]
+
+[node name="Music" type="AudioStreamPlayer" parent="sound" index="0"]
+
+stream = ExtResource( 7 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="Jump" type="AudioStreamPlayer" parent="sound" index="1"]
+
+stream = ExtResource( 8 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+script = ExtResource( 9 )
+
+[node name="Coin" type="AudioStreamPlayer" parent="sound" index="2"]
+
+stream = ExtResource( 10 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+script = ExtResource( 11 )
+
+[node name="Pain" type="AudioStreamPlayer" parent="sound" index="3"]
+
+stream = ExtResource( 12 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+script = ExtResource( 13 )
+
+[node name="LifeUp" type="AudioStreamPlayer" parent="sound" index="4"]
+
+stream = ExtResource( 14 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+script = ExtResource( 15 )
 
 
