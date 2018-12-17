@@ -30,7 +30,7 @@ func fall(delta):
 	if is_on_floor() or is_on_ceiling():
 		motion.y = 0
 	else:
-		motion.y += GRAVITY * delta	
+		motion.y += GRAVITY * delta
 	if position.y > world_limit:
 		Global.GameState.end_game()
 
