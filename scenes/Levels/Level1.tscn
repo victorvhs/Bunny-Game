@@ -5,12 +5,13 @@
 [ext_resource path="res://scenes/Camera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/plataform_tiles.tres" type="TileSet" id=4]
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Spikes" type="Node2D" parent="." index="0"]
 
+editor/display_folded = true
 position = Vector2( 174.163, 303.961 )
 
 [node name="Spikes" parent="Spikes" index="0" instance=ExtResource( 1 )]
@@ -39,7 +40,7 @@ _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Spikes5" parent="Spikes" index="4" instance=ExtResource( 1 )]
 
-position = Vector2( 1559.82, -589.988 )
+position = Vector2( 1552.12, -614.172 )
 rotation = -3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
@@ -54,7 +55,6 @@ _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
-editor/display_folded = true
 world_limit = 1500
 
 [node name="Camera2D" parent="player" index="2" instance=ExtResource( 3 )]
