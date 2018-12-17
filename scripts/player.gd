@@ -37,6 +37,9 @@ func fall(delta):
 func jump():
 	if Input.is_action_pressed("ui_up") and is_on_floor():
 		motion.y = JUMP_SPEED
+		
+func hurtJump():
+	motion.y = JUMP_SPEED
 
 func run():
 	if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):

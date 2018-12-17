@@ -40,7 +40,7 @@ custom_solver_bias = 0.0
 radius = 61.5329
 height = 44.9715
 
-[node name="player" type="KinematicBody2D"]
+[node name="player" type="KinematicBody2D" index="0"]
 
 position = Vector2( 304, 155 )
 input_pickable = false
@@ -57,9 +57,10 @@ world_limit = 2000
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 frames = SubResource( 1 )
-animation = "jump"
+animation = "hurt"
 playing = true
 script = ExtResource( 8 )
+_sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
